@@ -13,17 +13,12 @@
     'author': "My Company",
     'website': "https://www.yourcompany.com",
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Hidden',
-    "price": 100.00,
-    "currency": "EUR",
+    # 'category': 'Hidden',
+    # "price": 100.00,
+    # "currency": "EUR",
 
-    # any module necessary for this one to work correctly
     'depends': ['base', 'mail', 'mail_list_dlc_2'],
 
-    # always loaded
     'data': [
         'data/sequence.xml',
         'data/car_mail_template.xml',
