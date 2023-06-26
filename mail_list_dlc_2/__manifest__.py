@@ -16,7 +16,7 @@
     'category': 'Uncategorized',
     'version': '0.1',
 
-    'depends': ['task_14'],
+    'depends': ['base'],
 
     'data': [
         'security/ir.model.access.csv',
