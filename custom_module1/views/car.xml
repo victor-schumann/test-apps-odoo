@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- Form View -->
+    <record id='car_form' model='ir.ui.view'>
+        <field name='name'>Cars Form</field>
+        <field name='model'>car.car</field>
+        <field name='arch' type='xml'>
+            <form string='Vehicle Details'>
+                <sheet>
+                    <header>
+                        <button name="%(custom_module1.car_wizard_action)d"
+                                type="action"
+                                string="Update Horse Power"
+                                class="btn-primary"
+                                attrs="{'invisible':[('horse_power','!=',0)]}"/>
+
+                        <button name='mail_driver_about_car'
+                                string='Mail Driver'
+                                type='object'
+                                class='oe_highlight'
+                                attrs="{'invisible':[('status','!=','in-use')]}"/>
+
+                        <field name='status' widget='statusbar' options="{'clickable':1}"/>
+                    </header>
+
+                    <group>
+                        <group>
+                            <field name='car_sequence' readonly='1'/>
+                            <field name='name' required='1'/>
+                            <field name='driver_id'/>
+                            <field name='feature_ids' widget='many2many_tags'/>
+                        </group>
+                        <group>
+                            <field name='door_number'/>
+<!--                            If 'name' = '', then 'horse_power' is readonly and prompts the user to enter a name first.-->
+                            <field name='horse_power' required='1' attrs="{'readonly':[('name', '=', '')]}"/>
+                            <field name='max_speed'/>
+                        </group>
+                    </group>
+                </sheet>
+                <sheet>
+                    <group>
+                        <field name='random_message'/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id='car_tree_view' model='ir.ui.view'>
+        <field name='name'>Cars - Tree</field>
+        <field name='model'>car.car</field>
+        <field name='arch' type='xml'>
+
+            <tree>
+                <field name='name'/>
+                <field name='car_sequence' readonly='1'/>
+                <field name='driver_id'/>
+                <field name='horse_power'/>
+                <field name='door_number'/>
+
+            </tree>
+
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id='car_action' model='ir.actions.act_window'>
+        <field name='name'>Cars</field>
+        <field name='type'>ir.actions.act_window</field>
+        <field name='res_model'>car.car</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem
+            id='car_menu'
+            name='Car Menu'
+            sequence='1'
+            action='car_action'
+            groups='base.group_user'
+    />
+
+
+</odoo>

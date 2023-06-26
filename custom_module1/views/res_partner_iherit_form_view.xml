@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id='res_partner_form_view_inherit' model='ir.ui.view'>
+        <field name='name'>Res Partner Form Inherit</field>
+        <field name='model'>res.partner</field>
+        <field name='inherit_id' ref='base.view_partner_form'/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name='message1'/>
+                <field name='message2'/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id='res_partner_tree_view_inherit' model='ir.ui.view'>
+        <field name='name'>Res Partner Tree Inherit</field>
+        <field name='model'>res.partner</field>
+        <field name='inherit_id' ref='base.view_partner_tree'/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='phone']" position='before'>
+                <field name='message1'/>
+            </xpath>
+            <xpath expr="//field[@name='phone']" position='after'>
+                <field name='message2'/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
