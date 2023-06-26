@@ -2,18 +2,14 @@
 {
     'name': "test_14",
 
-    'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+    'summary': 'summary',
 
-    'description': """
-        Long description of module's purpose
-    """,
+    'description': '',
 
     'author': "My Company",
     'website': "https://www.yourcompany.com",
 
-    # 'category': 'Hidden',
+    'category': 'Human Resources',
     # "price": 100.00,
     # "currency": "EUR",
 
