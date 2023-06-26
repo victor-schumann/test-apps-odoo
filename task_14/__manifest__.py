@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "task_14",
+    'name': "custom_module1",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -17,15 +17,27 @@
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.1',
+    "price": 100.00,
+    "currency": "EUR",
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'maintenance'],
+    'depends': ['base', 'mail'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/maintenance_equipment_category_form_inherit.xml',
+        'data/sequence.xml',
+        'data/car_mail_template.xml',
+        'wizard/car_wizard.xml',
+
+        'security/security.xml',
+        'security/ir.model.access.csv',
+
+        'views/views.xml',
+        'views/templates.xml',
+        'views/car.xml',
+        'views/parking.xml',
+        'views/res_partner_iherit_form_view.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [

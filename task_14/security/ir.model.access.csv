@@ -1,2 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_task_14_task_14,task_14.task_14,model_task_14_task_14,base.group_user,1,1,1,1
+
+access_car_car_user,AccessUserCar,model_car_car,custom_module1.group_user,1,0,0,0
+access_car_car_manager,AccessManagerCar,model_car_car,custom_module1.group_manager,1,1,1,0
+access_car_car_super_manager,AccessSuperManagerCar,model_car_car,custom_module1.group_super_manager,1,1,1,1
+
+access_parking_parking,access_parking_parking,model_parking_parking,base.group_user,1,1,1,1
+access_features_features,access_features_features,model_features_features,base.group_user,1,1,1,1
+custom_module1.access_car_wizard,access_car_wizard,custom_module1.model_car_wizard,base.group_user,1,1,1,1

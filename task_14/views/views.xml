@@ -2,9 +2,9 @@
   <data>
     <!-- explicit list view definition -->
 <!--
-    <record model="ir.ui.view" id="task_14.list">
-      <field name="name">task_14 list</field>
-      <field name="model">task_14.task_14</field>
+    <record model="ir.ui.view" id="custom_module1.list">
+      <field name="name">custom_module1 list</field>
+      <field name="model">custom_module1.custom_module1</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
@@ -17,18 +17,18 @@
 
     <!-- actions opening views on models -->
 <!--
-    <record model="ir.actions.act_window" id="task_14.action_window">
-      <field name="name">task_14 window</field>
-      <field name="res_model">task_14.task_14</field>
+    <record model="ir.actions.act_window" id="custom_module1.action_window">
+      <field name="name">custom_module1 window</field>
+      <field name="res_model">custom_module1.custom_module1</field>
       <field name="view_mode">tree,form</field>
     </record>
 -->
 
     <!-- server action to the one above -->
 <!--
-    <record model="ir.actions.server" id="task_14.action_server">
-      <field name="name">task_14 server</field>
-      <field name="model_id" ref="model_task_14_task_14"/>
+    <record model="ir.actions.server" id="custom_module1.action_server">
+      <field name="name">custom_module1 server</field>
+      <field name="model_id" ref="model_custom_module1_custom_module1"/>
       <field name="state">code</field>
       <field name="code">
         action = {
@@ -42,19 +42,19 @@
 
     <!-- Top menu item -->
 <!--
-    <menuitem name="task_14" id="task_14.menu_root"/>
+    <menuitem name="custom_module1" id="custom_module1.menu_root"/>
 -->
     <!-- menu categories -->
 <!--
-    <menuitem name="Menu 1" id="task_14.menu_1" parent="task_14.menu_root"/>
-    <menuitem name="Menu 2" id="task_14.menu_2" parent="task_14.menu_root"/>
+    <menuitem name="Menu 1" id="custom_module1.menu_1" parent="custom_module1.menu_root"/>
+    <menuitem name="Menu 2" id="custom_module1.menu_2" parent="custom_module1.menu_root"/>
 -->
     <!-- actions -->
 <!--
-    <menuitem name="List" id="task_14.menu_1_list" parent="task_14.menu_1"
-              action="task_14.action_window"/>
-    <menuitem name="Server to list" id="task_14" parent="task_14.menu_2"
-              action="task_14.action_server"/>
+    <menuitem name="List" id="custom_module1.menu_1_list" parent="custom_module1.menu_1"
+              action="custom_module1.action_window"/>
+    <menuitem name="Server to list" id="custom_module1" parent="custom_module1.menu_2"
+              action="custom_module1.action_server"/>
 -->
   </data>
 </odoo>
