@@ -10,8 +10,8 @@
     'website': "https://www.yourcompany.com",
 
     'category': 'Human Resources',
-    # "price": 100.00,
-    # "currency": "EUR",
+    "price": 100.00,
+    "currency": "EUR",
 
     'depends': ['base', 'mail', 'mail_list_dlc_2'],
 
