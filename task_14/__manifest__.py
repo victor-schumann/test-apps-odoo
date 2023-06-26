@@ -13,7 +13,7 @@
     # "price": 100.00,
     # "currency": "EUR",
 
-    'depends': ['base', 'mail', 'mail_list_dlc_2', 'estate_account'],
+    'depends': ['base', 'estate_account', 'mail_list_dlc_2'],
 
     'data': [
         'data/sequence.xml',

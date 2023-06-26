@@ -17,5 +17,5 @@
     'version': '0.1',
 
     'depends': ['task_14'],
-    "auto_install": True,
+    'application': False,
 }
