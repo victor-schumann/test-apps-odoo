@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!--    Form-->
+    <record model="ir.ui.view" id="maintenance_equipment_category_form_inherit">
+        <field name="name">maintenance.equipment.category.form.view.inherit</field>
+        <field name="model">maintenance.equipment.category</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_category_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='note']" position="after">
+                    <field name="message"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- Tree -->
+<!--    <record model="ir.ui.view" id="mass_mailing_contact_tree_inherit">-->
+<!--        <field name="name">mailing.contact.tree.view.inherit</field>-->
+<!--        <field name="model">mailing.contact</field>-->
+<!--        <field name="inherit_id" ref="mass_mailing.mailing_contact_view_tree"/>-->
+<!--        <field name="arch" type="xml">-->
+
+<!--            <xpath expr="//field[@name='name']" position="after">-->
+<!--                <field name="test_id"/>-->
+<!--            </xpath>-->
+
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>
+
+

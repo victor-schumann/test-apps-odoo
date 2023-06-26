@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    # Form
+    <record id="wizard_view_form" model="ir.ui.view">
+        <field name="name">wizard.file.form</field>
+        <field name="model">wizard.file</field>
+        <field name="arch" type="xml">
+            <form string="Wizard Form">
+                <group>
+                    <field name="wiz_counter"/>
+                </group>
+                <footer>
+                    <button name="import_contacts" string="Add Contacts" type="object" class="btn-primary"/>
+                    <button name="drop_contacts" string="DELETE CONTACTS" type="object" class="btn-danger"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    # Action
+    <record id="action_wizard" model="ir.actions.act_window">
+        <field name="name">Update Contacts</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">wizard.file</field>
+        <field name="view_mode">form</field>
+        <!--        <field name="view_id" ref=""/>-->
+        <field name="target">new</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!--    Form-->
+    <record model="ir.ui.view" id="mass_mailing_contact_form_inherit">
+        <field name="name">mailing.contact.view.inherit</field>
+        <field name="model">mailing.contact</field>
+        <field name="inherit_id" ref="mass_mailing.mailing_contact_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//div[@class='oe_title']" position="before">
+                <button name="import_contact"
+                        type="object"
+                        string="Import Random Data"
+                        class="btn-primary"
+                />
+            </xpath>
+
+            <xpath expr="//field[@name='tag_ids']" position="before">
+                <group>
+                    <field name="age"/>
+                    <field name="gender"/>
+                    <field name="street"/>
+                    <field name="city"/>
+                    <field name="state"/>
+                    <field name="postcode"/>
+
+                </group>
+            </xpath>
+
+            <xpath expr="//field[@name='company_name']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='title_id']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='tag_ids']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+
+        </field>
+    </record>
+
+    <!-- Tree -->
+    <record model="ir.ui.view" id="mass_mailing_contact_tree_inherit">
+        <field name="name">mailing.contact.tree.view.inherit</field>
+        <field name="model">mailing.contact</field>
+        <field name="inherit_id" ref="mass_mailing.mailing_contact_view_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="test_id"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
+
+

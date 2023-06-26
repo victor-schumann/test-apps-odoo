@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--    For some reason you cannot install the module if you have the menu item and the action on the same file. To fix this, remove the action to a different xml or simply put it above the menus.-->
+    <record id="action_delete_all_contacts" model="ir.actions.server">
+        <field name="name">Delete All Contacts</field>
+        <field name="model_id" ref="model_mailing_contact"/>
+        <field name="state">code</field>
+        <field name="code">model.delete_all_contacts()</field>
+    </record>
+
+    <menuitem id="initiate_wizard"
+              name="Wizard"
+              parent="mass_mailing.mass_mailing_configuration"
+              action="action_wizard"
+              sequence="-1"/>
+
+    <menuitem id="drop_contacts"
+              name="Drop"
+              parent="mass_mailing.mass_mailing_configuration"
+              action="action_delete_all_contacts"
+              sequence="-2"/>
+
+</odoo>

@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-
-custom_module2.access_mailing_list_mailing_list,access_mailing_list_mailing_list,custom_module2.model_mailing_list_mailing_list,base.group_user,1,1,1,1
-custom_module2.access_contact_s_contact_s,access_contact_s_contact_s,custom_module2.model_contact_s_contact_s,base.group_user,1,1,1,1
-access_mailing_list_wizard,Mailing List Wizard,model_mailing_list_wizard,base.group_user,1,1,1,1
