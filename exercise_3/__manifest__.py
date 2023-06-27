@@ -9,7 +9,7 @@
     'category': 'Uncategorized',
     'version': '0.1',
 
-    'depends': ['task_14', 'mail_list_dlc_2'],
+    'depends': ['task_14', 'mail_list_dlc_2', 'task_15'],
 
     'data': [
         # 'data/schedule.xml',
